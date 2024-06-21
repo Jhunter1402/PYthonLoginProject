@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body bgcolor="#add8e6">
+<Center>
+    <form action="./register" method="post">
+        {% csrf_token %}
+        {{ rf }}<br>
+        <input type="submit" value="Register">
+    </form>
+</Center>
+</body>
+</html>
