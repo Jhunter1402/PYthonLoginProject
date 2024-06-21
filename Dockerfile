@@ -12,6 +12,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpq-dev \
+    default-libmysqlclient-dev \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
@@ -29,4 +30,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Command to run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "project10.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "your_project_name.wsgi:application"]
