@@ -1,0 +1,6 @@
+Django
+mysqlclient
+gunicorn
+# Other dependencies
+django-environ
+djangorestframework
