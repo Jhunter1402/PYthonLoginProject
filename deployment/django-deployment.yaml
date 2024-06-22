@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-app
+spec:
+  replicas: 3  # Adjust as needed
+  selector:
+    matchLabels:
+      app: django-app
+  template:
+    metadata:
+      labels:
+        app: django-app
+    spec:
+      containers:
+        - name: django-app
+          image: jhunter14/django_login_app:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_HOST
+              value: mysql-service
+            - name: DATABASE_NAME
+              value: mysql_db
+            - name: DATABASE_USER
+              value: user
+            - name: DATABASE_PASSWORD
+              value: jh@123456
