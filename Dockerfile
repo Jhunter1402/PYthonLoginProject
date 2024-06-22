@@ -31,4 +31,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Command to run the application
-CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn --bind 0.0.0.0:8000 my_project.wsgi:application"]
+CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn --bind 0.0.0.0:8000 project10.wsgi:application"]
