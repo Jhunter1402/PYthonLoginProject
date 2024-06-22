@@ -7,6 +7,7 @@ spec:
     storage: 3Gi  # Adjust size as necessary
   accessModes:
     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
   storageClassName: manual
   hostPath:
     path: "/mnt/data/mysql"  # Adjust the path as necessary
